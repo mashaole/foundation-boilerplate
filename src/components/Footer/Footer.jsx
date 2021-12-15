@@ -29,7 +29,7 @@ function Footer() {
         <div>
             <div style={phantom} />
             <div style={style}>
-                © 2020 by Company
+                Copyright © 2021 'Company'.  All rights reserved.No part of this site may be reproduced without our written permission.
                 <hr />
                 <a href="https://www.iampresenting.com"><img src={logo} loading="lazy" alt="IAmPresenting" />
                 </a>
