@@ -1,40 +1,18 @@
 
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../../Assets/IAmPresenting.png'
+import './Footer.css'
 
-var style = {
-    backgroundColor: "#fffff",
-    textAlign: "center",
-    left: "0",
-    bottom: "0",
-    height: "auto",
-    fontSize: "90%",
-    color: "black",
-    padding: "30px",
-    marginRight: "10px",
-    marginTop: "1rem",
-    position: "fixed",
-    width: "100%"
-}
-
-var phantom = {
-    display: 'grid',
-    marginRight: '30px',
-}
+const logo ="https://res.cloudinary.com/ddjvdcads/image/upload/v1641463445/oembsy727jbrkpo7rfde.png"
 
 function Footer() {
     return (
-        <div>
-            <div style={phantom} />
-            <div style={style}>
-                Copyright © 2021 'Company'.  All rights reserved.No part of this site may be reproduced without our written permission.
-                <hr />
-                <a href="https://www.iampresenting.com"><img src={logo} loading="lazy" alt="IAmPresenting" />
-                </a>
+            <div className='footer'>
+            <a href="https://www.iampresenting.com">
+                <img src={logo}  loading="lazy" style={{width:"70%",height:"70%"}} alt="IAmPresenting" />
+                </a><hr/>
+                Copyright © 2021 [Company].  All rights reserved.No part of this site may be reproduced without our written permission.
             </div>
-        </div >
     )
 }
 

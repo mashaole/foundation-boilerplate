@@ -3,6 +3,13 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
+const navTitles = [
+	{id: 1, title: 'Home', route: '/'},
+	{id: 2, title: 'Shop', route: '/shop'},
+	{id: 7, title: 'About Us', route: '/about'},
+	{id: 6, title: 'Contact Us', route: '/contact'},
+  ];
+
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 
@@ -16,33 +23,20 @@ const Navbar = () => {
 
 	return (
 		<nav className="navbar">
-			<Link to="/" className="nav-logo">
-				Logo
+			<Link to="/" className="nav-logo" onClick={closeMenu}>
+				[Company]
 			</Link>
 			<div onClick={handleClick} className="nav-icon">
 				{open ? <FiX /> : <FiMenu />}
 			</div>
 			<ul className={open ? 'nav-links active' : 'nav-links'}>
-				<li className="nav-item">
-					<Link to="/" className="nav-link" onClick={closeMenu}>
-						Home
-					</Link>
-				</li>
-				<li className="nav-item">
-					<Link to="/about" className="nav-link" onClick={closeMenu}>
-						About
-					</Link>
-				</li>
-				<li className="nav-item">
-					<Link to="/shop" className="nav-link" onClick={closeMenu}>
-						Shop
-					</Link>
-				</li>
-				<li className="nav-item">
-					<Link to="/contact" className="nav-link" onClick={closeMenu}>
-						Contact
-					</Link>
-				</li>
+			{navTitles.map((item,key)=>
+               { return(                
+				   <li className="nav-item" key={key}>
+					<a className="nav-link" href={item.route}>
+						{item.title}
+					</a>
+				</li>)})}
 			</ul>
 		</nav>
 	);

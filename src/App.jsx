@@ -13,6 +13,7 @@ function App() {
 		<div className="app">
 			<Router>
 				<Navbar />
+				<div className="content">
 				<Switch>
 					<Route path="/" exact component={Home} ></Route>
 					<Route path="/about" exact component={About} />
@@ -20,7 +21,8 @@ function App() {
 					<Route path="/contact" exact component={Contact} />
 				</Switch>
 				{Footer()}
-			</Router>
+				</div>
+			</Router>		
 		</div>
 	);
 }
