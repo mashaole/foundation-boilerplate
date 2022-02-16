@@ -14,15 +14,16 @@ function App() {
 			<Router>
 				<Navbar />
 				<div className="content">
-				<Switch>
-					<Route path="/" exact component={Home} ></Route>
-					<Route path="/about" exact component={About} />
-					<Route path="/shop" exact component={Shop} />
-					<Route path="/contact" exact component={Contact} />
-				</Switch>
-				{Footer()}
+					<Switch>
+						<Route path="/" exact component={Home} ></Route>
+						<Route path="/about" exact component={About} />
+						<Route path="/shop" exact component={Shop} />
+						<Route path="/contact" exact component={Contact} />
+						<Route path="*" component={Home} />
+					</Switch>
+					{Footer()}
 				</div>
-			</Router>		
+			</Router>
 		</div>
 	);
 }
